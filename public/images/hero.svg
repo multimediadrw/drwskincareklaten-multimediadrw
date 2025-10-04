@@ -1,0 +1,7 @@
+<svg width="500" height="300" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="300" fill="#F3F4F6"/>
+<rect x="175" y="125" width="150" height="50" rx="8" fill="#EE5097"/>
+<text x="250" y="155" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="600">Hero Image</text>
+<text x="250" y="100" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">DRW Skincare</text>
+<text x="250" y="190" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Perawatan Kulit Terbaik</text>
+</svg>
