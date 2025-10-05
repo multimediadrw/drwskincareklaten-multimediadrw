@@ -1,34 +1,35 @@
 import { Metadata } from 'next'
+import { SITE_CONFIG, getPageUrl, getCanonicalUrl } from '../../lib/site-config'
 
 export const metadata: Metadata = {
-  title: 'Produk Kecantikan & Skincare DRW Skincare - Produk Dokter Terpercaya',
-  description: 'Koleksi lengkap Produk Kecantikan & Skincare DRW Skincare dengan formula dokter. Serum anti aging, moisturizer, cleanser, facial cream, whitening serum, acne cream dan produk skincare profesional BPOM untuk semua jenis kulit.',
-  keywords: 'produk kecantikan DRW skincare, skincare DRW jakarta, produk skincare dokter, serum anti aging, whitening serum, acne cream, facial moisturizer, cleanser wajah, produk kecantikan BPOM, skincare profesional, cosmeceutical, produk dokter kulit',
-  metadataBase: new URL('https://drwskincarejakarta.com'),
+  title: `Produk Kecantikan & Skincare ${SITE_CONFIG.business.name} - Produk Dokter Terpercaya`,
+  description: `Koleksi lengkap Produk Kecantikan & Skincare ${SITE_CONFIG.business.name} dengan formula dokter. Serum anti aging, moisturizer, cleanser, facial cream, whitening serum, acne cream dan produk skincare profesional BPOM untuk semua jenis kulit.`,
+  keywords: SITE_CONFIG.seo.keywords.product,
+  metadataBase: new URL(SITE_CONFIG.website.baseUrl),
   openGraph: {
-    title: 'Produk Kecantikan & Skincare DRW Skincare - Formula Dokter Terpercaya',
-    description: 'Koleksi lengkap Produk Kecantikan & Skincare DRW Skincare dengan formula dokter berpengalaman. Produk skincare profesional BPOM untuk hasil kulit optimal dan aman.',
+    title: `Produk Kecantikan & Skincare ${SITE_CONFIG.business.name} - Formula Dokter Terpercaya`,
+    description: `Koleksi lengkap Produk Kecantikan & Skincare ${SITE_CONFIG.business.name} dengan formula dokter berpengalaman. Produk skincare profesional BPOM untuk hasil kulit optimal dan aman.`,
     images: [
       {
-        url: '/og_product.png',
+        url: SITE_CONFIG.images.ogProduct,
         width: 1200,
         height: 630,
-        alt: 'DRW Skincare - Produk Kecantikan & Skincare Formula Dokter',
+        alt: `${SITE_CONFIG.business.name} - Produk Kecantikan & Skincare Formula Dokter`,
       },
     ],
     type: 'website',
-    siteName: 'DRW Skincare',
-    url: 'https://drwskincarejakarta.com/product',
+    siteName: SITE_CONFIG.business.name,
+    url: getPageUrl('/product'),
     locale: 'id_ID',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Produk Kecantikan & Skincare DRW Skincare',
-    description: 'Koleksi lengkap Produk Kecantikan & Skincare dengan formula dokter berpengalaman.',
-    images: ['/og_product.png'],
+    title: `Produk Kecantikan & Skincare ${SITE_CONFIG.business.name}`,
+    description: `Koleksi lengkap Produk Kecantikan & Skincare dengan formula dokter berpengalaman dari ${SITE_CONFIG.business.name}.`,
+    images: [SITE_CONFIG.images.ogProduct],
   },
   alternates: {
-    canonical: 'https://drwskincarejakarta.com/product',
+    canonical: getCanonicalUrl('/product'),
   },
 }
 

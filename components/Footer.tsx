@@ -5,7 +5,8 @@ import {
   faFacebook, 
   faInstagram, 
   faTiktok,
-  faWhatsapp
+  faWhatsapp,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import { 
   faPhone,
@@ -47,7 +48,31 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <FontAwesomeIcon icon={faTiktok} className="text-white w-5 h-5" />
                 <a href={SITE_CONFIG.socialMedia.tiktok} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  @griyacantikshovia
+                  @mbeautyaesthetic_drwklt
+                </a>
+              </div>
+
+              {/* Instagram */}
+              <div className="flex items-center space-x-3">
+                <FontAwesomeIcon icon={faInstagram} className="text-pink-400 w-5 h-5" />
+                <a href={SITE_CONFIG.socialMedia.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  @mbeautyaesthetic_drwklaten
+                </a>
+              </div>
+
+              {/* Facebook */}
+              <div className="flex items-center space-x-3">
+                <FontAwesomeIcon icon={faFacebook} className="text-blue-400 w-5 h-5" />
+                <a href={SITE_CONFIG.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  Mega Ukang
+                </a>
+              </div>
+
+              {/* YouTube */}
+              <div className="flex items-center space-x-3">
+                <FontAwesomeIcon icon={faYoutube} className="text-red-500 w-5 h-5" />
+                <a href={SITE_CONFIG.socialMedia.youtube} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  @megaminochan8879
                 </a>
               </div>
 
@@ -61,39 +86,7 @@ const Footer = () => {
                   className="w-5 h-5"
                 />
                 <a href={SITE_CONFIG.socialMedia.shopee} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  Drwskincare_Onlinehop
-                </a>
-              </div>
-
-              {/* Tokopedia */}
-              <div className="flex items-center space-x-3">
-                <FontAwesomeIcon icon={faShoppingBag} className="text-green-400 w-5 h-5" />
-                <a href={SITE_CONFIG.socialMedia.tokopedia} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  drwskincareasli
-                </a>
-              </div>
-
-              {/* Facebook Personal */}
-              <div className="flex items-center space-x-3">
-                <FontAwesomeIcon icon={faFacebook} className="text-blue-400 w-5 h-5" />
-                <a href={SITE_CONFIG.socialMedia.facebookPersonal} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  Shovia Parmawati
-                </a>
-              </div>
-
-              {/* Facebook Fan Page */}
-              <div className="flex items-center space-x-3">
-                <FontAwesomeIcon icon={faFacebook} className="text-blue-400 w-5 h-5" />
-                <a href={SITE_CONFIG.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  Griya Cantik Shovia
-                </a>
-              </div>
-
-              {/* Instagram */}
-              <div className="flex items-center space-x-3">
-                <FontAwesomeIcon icon={faInstagram} className="text-pink-400 w-5 h-5" />
-                <a href={SITE_CONFIG.socialMedia.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  @griya_cantik_shovia
+                  klinik_onlinedrwskincare
                 </a>
               </div>
             </div>

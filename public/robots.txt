@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://drwskincarejakarta.com/sitemap.xml
+Sitemap: https://drwskincareklaten.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

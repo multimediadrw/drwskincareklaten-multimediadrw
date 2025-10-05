@@ -1,30 +1,28 @@
 import { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import { SITE_CONFIG } from '../../lib/site-config'
 
 export const metadata: Metadata = {
-  title: 'FAQ - Pertanyaan Seputar DRW Skincare',
-  description: 'Pertanyaan yang sering diajukan seputar produk skincare, treatment kecantikan, dan layanan DRW Skincare. Temukan jawaban lengkap di sini.',
-  keywords: 'FAQ DRW Skincare, pertanyaan skincare, perawatan kulit, konsultasi gratis, treatment kecantikan, produk kecantikan skincare',
+  title: `FAQ - Pertanyaan Seputar ${SITE_CONFIG.business.name}`,
+  description: `Pertanyaan yang sering diajukan seputar produk skincare, treatment kecantikan, dan layanan ${SITE_CONFIG.business.name}. Temukan jawaban lengkap di sini.`,
+  keywords: `FAQ ${SITE_CONFIG.business.name}, pertanyaan skincare, perawatan kulit, konsultasi gratis, treatment kecantikan, produk kecantikan skincare`,
 }
 
 export default function FAQPage() {
-  const faqData = [
-    {
-      question: "Apakah produk DRW Skincare aman dan sudah BPOM?",
-      answer: "Ya, semua produk DRW Skincare telah terdaftar di BPOM dan aman digunakan. Kami menggunakan bahan-bahan berkualitas tinggi yang telah teruji secara klinis."
-    },
-    {
+  const faqData = [    {
+      question: `Apakah produk ${SITE_CONFIG.business.name} aman dan sudah BPOM?`,
+      answer: `Ya, semua produk ${SITE_CONFIG.business.name} telah terdaftar di BPOM dan aman digunakan. Kami menggunakan bahan-bahan berkualitas tinggi yang telah teruji secara klinis.`
+    },    {
       question: "Bagaimana cara konsultasi dengan dokter?",
-      answer: "Anda bisa konsultasi gratis dengan dr. Wahyu Triasmara melalui WhatsApp di 0857-9079-5910. Konsultasi tersedia setiap hari untuk membantu menentukan perawatan yang tepat."
+      answer: `Anda bisa konsultasi gratis dengan ${SITE_CONFIG.business.founder} melalui WhatsApp di ${SITE_CONFIG.whatsapp.displayNumber}. Konsultasi tersedia setiap hari untuk membantu menentukan perawatan yang tepat.`
     },
     {
       question: "Berapa lama hasil treatment terlihat?",
       answer: "Hasil treatment bervariasi tergantung jenis kulit dan kondisi awal. Umumnya hasil mulai terlihat setelah 2-4 kali perawatan dengan interval yang tepat."
-    },
-    {
-      question: "Apakah DRW Skincare melayani area Jakarta dan Bekasi?",
-      answer: "Ya, kami melayani area Jakarta, Bekasi, Depok, Tangerang, dan sekitarnya. Untuk produk, kami juga melayani pengiriman ke seluruh Indonesia."
+    },    {
+      question: `Apakah ${SITE_CONFIG.business.name} melayani area ${SITE_CONFIG.location.area}?`,
+      answer: `Ya, kami melayani ${SITE_CONFIG.location.description}. Untuk produk, kami juga melayani pengiriman ke seluruh Indonesia.`
     },
     {
       question: "Bagaimana cara booking treatment?",

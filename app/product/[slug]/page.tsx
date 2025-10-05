@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare, faArrowLeft, faTag, faFlask, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { SITE_CONFIG, getPageUrl } from '../../../lib/site-config';
 
 interface Product {
   id: string;
@@ -170,18 +171,17 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         minimumFractionDigits: 0,
       }).format(product.hargaUmum)
     : 'Hubungi Kami';
-
-  const pageTitle = `${product.namaProduk} - ${productPrice} | DRW Skincare`;
+  const pageTitle = `${product.namaProduk} - ${productPrice} | ${SITE_CONFIG.business.name}`;
   const pageDescription = product.deskripsi 
-    ? `${product.deskripsi} - Produk skincare berkualitas dari DRW Skincare dengan harga ${productPrice}. ${product.bpom ? `BPOM: ${product.bpom}` : ''}`
-    : `${product.namaProduk} - Produk skincare berkualitas dari DRW Skincare dengan harga ${productPrice}. Konsultasi gratis dengan dokter berpengalaman.`;
+    ? `${product.deskripsi} - Produk skincare berkualitas dari ${SITE_CONFIG.business.name} dengan harga ${productPrice}. ${product.bpom ? `BPOM: ${product.bpom}` : ''}`
+    : `${product.namaProduk} - Produk skincare berkualitas dari ${SITE_CONFIG.business.name} dengan harga ${productPrice}. Konsultasi gratis dengan dokter berpengalaman.`;
 
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={`${product.namaProduk}, skincare, DRW Skincare, produk kecantikan, perawatan kulit, ${product.bpom ? `BPOM ${product.bpom}` : ''}`} />
+        <meta name="keywords" content={`${product.namaProduk}, skincare, ${SITE_CONFIG.business.name}, produk kecantikan, perawatan kulit, ${product.bpom ? `BPOM ${product.bpom}` : ''}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={pageTitle} />
@@ -189,10 +189,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <meta property="og:image" content={productImage} />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
-        <meta property="og:image:alt" content={`${product.namaProduk} - DRW Skincare`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="DRW Skincare" />
-        <meta property="og:url" content={`https://drwskincarejakarta.com/product/${params.slug}`} />
+        <meta property="og:image:alt" content={`${product.namaProduk} - ${SITE_CONFIG.business.name}`} />
+        <meta property="og:type" content="website" />        <meta property="og:site_name" content={SITE_CONFIG.business.name} />
+        <meta property="og:url" content={getPageUrl(`/product/${params.slug}`)} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -200,7 +199,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={productImage} />
         
-        <link rel="canonical" href={`https://drwskincarejakarta.com/product/${params.slug}`} />
+        <link rel="canonical" href={getPageUrl(`/product/${params.slug}`)} />
       </Head>
       
       <div className="min-h-screen bg-white">
@@ -428,7 +427,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           {relatedProducts.length > 0 && (
             <div className="mt-16">
               <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                Produk DRW Skincare Lainnya
+                Produk ${SITE_CONFIG.business.name} Lainnya
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 {relatedProducts.map((relatedProduct) => {

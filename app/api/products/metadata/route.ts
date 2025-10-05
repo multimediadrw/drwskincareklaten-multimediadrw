@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
+import { SITE_CONFIG, getPageUrl } from '../../../../lib/site-config';
 
 const prisma = new PrismaClient();
 
@@ -46,17 +47,15 @@ export async function GET(request: NextRequest) {
         }).format(Number(product.harga_umum))
       : 'Hubungi Kami';
 
-    const title = `${product.nama_produk} - ${productPrice} | DRW Skincare`;
-    const description = product.deskripsi_singkat 
-      ? `${product.deskripsi_singkat} - Produk skincare berkualitas dari DRW Skincare dengan harga ${productPrice}. ${product.bpom ? `BPOM: ${product.bpom}` : ''}`
-      : `${product.nama_produk} - Produk skincare berkualitas dari DRW Skincare dengan harga ${productPrice}. Konsultasi gratis dengan dokter berpengalaman.`;
+    const title = `${product.nama_produk} - ${productPrice} | ${SITE_CONFIG.business.name}`;    const description = product.deskripsi_singkat 
+      ? `${product.deskripsi_singkat} - Produk skincare berkualitas dari ${SITE_CONFIG.business.name} dengan harga ${productPrice}. ${product.bpom ? `BPOM: ${product.bpom}` : ''}`
+      : `${product.nama_produk} - Produk skincare berkualitas dari ${SITE_CONFIG.business.name} dengan harga ${productPrice}. Konsultasi gratis dengan dokter berpengalaman.`;
 
     const metadata = {
       title,
       description,
-      image: productImage,
-      url: `https://drwskincarejakarta.com/product/${slug}`,
-      keywords: `${product.nama_produk}, skincare, DRW Skincare, produk kecantikan, perawatan kulit, ${product.bpom ? `BPOM ${product.bpom}` : ''}`,
+      image: productImage,      url: getPageUrl(`/product/${slug}`),
+      keywords: `${product.nama_produk}, skincare, ${SITE_CONFIG.business.name}, produk kecantikan, perawatan kulit, ${product.bpom ? `BPOM ${product.bpom}` : ''}`,
       price: productPrice,
       bpom: product.bpom,
       category: product.produk_kategori?.[0]?.kategori?.nama_kategori || 'Skincare'

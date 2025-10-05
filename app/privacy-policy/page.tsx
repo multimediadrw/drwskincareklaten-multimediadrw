@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import { SITE_CONFIG } from '../../lib/site-config'
 
 export const metadata: Metadata = {
-  title: 'Kebijakan Privasi - DRW Skincare',
-  description: 'Kebijakan privasi DRW Skincare mengenai penggunaan data pribadi dan informasi pelanggan.',
+  title: `Kebijakan Privasi - ${SITE_CONFIG.business.name}`,
+  description: `Kebijakan privasi ${SITE_CONFIG.business.name} mengenai penggunaan data pribadi dan informasi pelanggan.`,
   robots: 'index, follow',
 }
 
@@ -15,18 +16,16 @@ export default function PrivacyPolicyPage() {
       
       {/* Page Header */}
       <header className="bg-primary text-white py-8">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-3xl font-bold">Kebijakan Privasi</h1>
-          <p className="text-pink-100 mt-2">DRW Skincare</p>
+        <div className="max-w-4xl mx-auto px-4">          <h1 className="text-3xl font-bold">Kebijakan Privasi</h1>
+          <p className="text-pink-100 mt-2">{SITE_CONFIG.business.name}</p>
         </div>
       </header>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="prose prose-lg max-w-none">
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Informasi yang Kami Kumpulkan</h2>
-            <p className="text-gray-600 mb-4">
-              DRW Skincare mengumpulkan informasi pribadi yang Anda berikan secara sukarela saat:
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Informasi yang Kami Kumpulkan</h2>            <p className="text-gray-600 mb-4">
+              {SITE_CONFIG.business.name} mengumpulkan informasi pribadi yang Anda berikan secara sukarela saat:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-4">
               <li>Melakukan konsultasi melalui WhatsApp</li>
@@ -63,10 +62,9 @@ export default function PrivacyPolicyPage() {
               Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, silakan hubungi kami:
             </p>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-gray-700">
-                <strong>DRW Skincare</strong><br />
-                WhatsApp: 0857-9079-5910<br />
-                Email: info@drwskincare.com
+              <p className="text-gray-700">                <strong>{SITE_CONFIG.business.name}</strong><br />
+                WhatsApp: {SITE_CONFIG.whatsapp.displayNumber}<br />
+                Email: info@{SITE_CONFIG.website.domain}
               </p>
             </div>
           </section>

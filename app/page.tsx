@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SafeImage from '@/components/SafeImage';
-import PromoPopup from '@/components/PromoPopup';
+// import PromoPopup from '@/components/PromoPopup'; // DISABLED
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { SITE_CONFIG, getWhatsAppUrl } from '../lib/site-config';
@@ -36,29 +36,30 @@ interface StaticProduct {
 
 const LandingPage = () => {
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [showPromoPopup, setShowPromoPopup] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);  // DISABLED: PromoPopup functionality
+  // const [showPromoPopup, setShowPromoPopup] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     fetchFeaturedProducts();
     
-    // Show popup after 2 seconds delay on every page load
-    const timer = setTimeout(() => {
-      setShowPromoPopup(true);
-    }, 2000);
+    // DISABLED: Show popup after 2 seconds delay on every page load
+    // const timer = setTimeout(() => {
+    //   setShowPromoPopup(true);
+    // }, 2000);
     
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
   }, []);
 
-  // Mark component as mounted on client to avoid SSR/CSR markup mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // DISABLED: Mark component as mounted on client to avoid SSR/CSR markup mismatch
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  const handleClosePromoPopup = () => {
-    setShowPromoPopup(false);
-  };
+  // DISABLED: PromoPopup close handler
+  // const handleClosePromoPopup = () => {
+  //   setShowPromoPopup(false);
+  // };
 
   const fetchFeaturedProducts = async () => {
     try {
@@ -490,131 +491,14 @@ const LandingPage = () => {
           </div>        </div>
       </section>
 
-      {/* TikTok Videos Section */}
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-4 font-source-code-pro">
-            Video Treatment Terbaru
-          </h2>
-          <p className="text-center text-gray-600 mb-8 md:mb-16 text-base md:text-xl font-source-code-pro font-light">
-            Lihat hasil treatment nyata dari pelanggan kami
-          </p>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* Video 1 - Soft Couter Milia */}
-            <div className="bg-gray-50 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 font-source-code-pro">Soft Couter Milia</h3>
-                <p className="text-sm text-gray-600 font-source-code-pro font-light">Treatment untuk menghilangkan milia dengan teknologi soft couter</p>
-              </div>
-              <div className="aspect-video bg-white rounded-lg overflow-hidden">
-                {mounted && (
-                  <blockquote 
-                    className="tiktok-embed" 
-                    cite="https://www.tiktok.com/@griyacantikshovia/video/7502776241989127432" 
-                    data-video-id="7502776241989127432" 
-                    style={{maxWidth: '100%', minWidth: '325px'}}
-                  >
-                    <section> 
-                      <a target="_blank" title="@griyacantikshovia" href="https://www.tiktok.com/@griyacantikshovia?refer=embed">@griyacantikshovia</a> 
-                      Soft Couter Milia Time 
-                      <a title="milia" target="_blank" href="https://www.tiktok.com/tag/milia?refer=embed">#milia</a> 
-                      <a title="drwskincare" target="_blank" href="https://www.tiktok.com/tag/drwskincare?refer=embed">#drwskincare</a> 
-                      <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral?refer=embed">#viral</a> 
-                      <a title="softcouter" target="_blank" href="https://www.tiktok.com/tag/softcouter?refer=embed">#softcouter</a> 
-                      <a title="facialtreatment" target="_blank" href="https://www.tiktok.com/tag/facialtreatment?refer=embed">#facialtreatment</a> 
-                      <a title="drwskincarebekasi" target="_blank" href="https://www.tiktok.com/tag/drwskincarebekasi?refer=embed">#drwskincarebekasi</a> 
-                      <a title="griyacantikshovia" target="_blank" href="https://www.tiktok.com/tag/griyacantikshovia?refer=embed">#griyacantikshovia</a> 
-                      <a title="capcut" target="_blank" href="https://www.tiktok.com/tag/capcut?refer=embed">#CapCut</a> 
-                      <a target="_blank" title="♬ Sebuah Perjalanan - Deza" href="https://www.tiktok.com/music/Sebuah-Perjalanan-7067045276141553666?refer=embed">♬ Sebuah Perjalanan - Deza</a> 
-                    </section> 
-                  </blockquote>
-                )}
-              </div>
-            </div>
-
-            {/* Video 2 - Facial Detox */}
-            <div className="bg-gray-50 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 font-source-code-pro">Facial Detox Premium</h3>
-                <p className="text-sm text-gray-600 font-source-code-pro font-light">Paket facial detox lengkap dengan totok wajah dan maskeran</p>
-              </div>
-              <div className="aspect-video bg-white rounded-lg overflow-hidden">
-                {mounted && (
-                  <blockquote 
-                    className="tiktok-embed" 
-                    cite="https://www.tiktok.com/@griyacantikshovia/video/7539780524391386375" 
-                    data-video-id="7539780524391386375" 
-                    style={{maxWidth: '100%', minWidth: '325px'}}
-                  >
-                    <section> 
-                      <a target="_blank" title="@griyacantikshovia" href="https://www.tiktok.com/@griyacantikshovia?refer=embed">@griyacantikshovia</a> 
-                      Facial Detox cuma 185rb saja Sdh paket komplit di facial sekaligus di Detox dan free totok wajah dan maskeran yuk ke GCS JATIRADEN dan GCS CIPAYUNG 😍
-                      <a title="promomakanmerdeka" target="_blank" href="https://www.tiktok.com/tag/promomakanmerdeka?refer=embed">#promomakanmerdeka</a> 
-                      <a title="griyacantikshovia" target="_blank" href="https://www.tiktok.com/tag/griyacantikshovia?refer=embed">#griyacantikshovia</a> 
-                      <a title="drwskincarejakartatimur" target="_blank" href="https://www.tiktok.com/tag/drwskincarejakartatimur?refer=embed">#drwskincarejakartatimur</a> 
-                      <a title="drwskincarebekasi" target="_blank" href="https://www.tiktok.com/tag/drwskincarebekasi?refer=embed">#drwskincarebekasi</a> 
-                      <a target="_blank" title="♬ suara asli  - DRWSKINCARE ASLI" href="https://www.tiktok.com/music/suara-asli-DRWSKINCARE-ASLI-7539780563289312001?refer=embed">♬ suara asli  - DRWSKINCARE ASLI</a> 
-                    </section> 
-                  </blockquote>
-                )}
-              </div>
-            </div>
-
-            {/* Video 3 - Open Treatment */}
-            <div className="bg-gray-50 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 font-source-code-pro">Open Treatment</h3>
-                <p className="text-sm text-gray-600 font-source-code-pro font-light">Pembukaan treatment soft couter terbaru di klinik kami</p>
-              </div>
-              <div className="aspect-video bg-white rounded-lg overflow-hidden">
-                {mounted && (
-                  <blockquote 
-                    className="tiktok-embed" 
-                    cite="https://www.tiktok.com/@griyacantikshovia/video/7524159182862290194" 
-                    data-video-id="7524159182862290194" 
-                    style={{maxWidth: '100%', minWidth: '325px'}}
-                  >
-                    <section> 
-                      <a target="_blank" title="@griyacantikshovia" href="https://www.tiktok.com/@griyacantikshovia?refer=embed">@griyacantikshovia</a> 
-                      OPEN TREATMENT SOFT COUTER  
-                      <a title="griyacantikshovia" target="_blank" href="https://www.tiktok.com/tag/griyacantikshovia?refer=embed">#griyacantikshovia</a> 
-                      <a title="drwskincarejakartatimur" target="_blank" href="https://www.tiktok.com/tag/drwskincarejakartatimur?refer=embed">#drwskincarejakartatimur</a> 
-                      <a title="openorderdrwskincare" target="_blank" href="https://www.tiktok.com/tag/openorderdrwskincare?refer=embed">#openorderdrwskincare</a> 
-                      <a title="drwskincarebekasi" target="_blank" href="https://www.tiktok.com/tag/drwskincarebekasi?refer=embed">#drwskincarebekasi</a> 
-                      <a title="facialtreatment" target="_blank" href="https://www.tiktok.com/tag/facialtreatment?refer=embed">#facialtreatment</a> 
-                      <a target="_blank" title="♬ suara asli  - DRWSKINCARE ASLI" href="https://www.tiktok.com/music/suara-asli-DRWSKINCARE-ASLI-7524159217003973393?refer=embed">♬ suara asli  - DRWSKINCARE ASLI</a> 
-                    </section> 
-                  </blockquote>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="text-center mt-8 md:mt-12">
-            <a 
-              href={SITE_CONFIG.socialMedia.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-primary to-pink-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg hover:from-pink-600 hover:to-pink-700 transition-colors inline-block font-source-code-pro font-semibold"
-            >
-              Lihat Video Lainnya di TikTok
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <Footer />
-
-      {/* Promo Popup for First Time Visitors (render only after client mount) */}
-      {mounted && (
+      <Footer />      {/* DISABLED: Promo Popup for First Time Visitors (render only after client mount) */}
+      {/* {mounted && (
         <PromoPopup 
           isOpen={showPromoPopup} 
           onClose={handleClosePromoPopup} 
         />
-      )}
+      )} */}
     </div>
   );
 };

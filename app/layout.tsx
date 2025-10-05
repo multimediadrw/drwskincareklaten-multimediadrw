@@ -48,15 +48,13 @@ export const metadata = {
         alt: `${SITE_CONFIG.business.name} - ${SITE_CONFIG.business.tagline}`,
       },
     ],
-  },
-  twitter: {
+  },  twitter: {
     card: 'summary_large_image',
-    title: 'DRW Skincare - Pusat Kecantikan Terpercaya',
-    description: 'Pusat kecantikan dan perawatan kulit terpercaya dengan produk skincare berkualitas dan dokter berpengalaman.',
-    images: ['/logo_drwskincare_square.png'],
-  },
-  alternates: {
-    canonical: 'https://drwskincarejakarta.com',
+    title: `${SITE_CONFIG.business.name} - Pusat Kecantikan Terpercaya`,
+    description: SITE_CONFIG.business.description,
+    images: [SITE_CONFIG.images.logoSquare],
+  },alternates: {
+    canonical: SITE_CONFIG.website.baseUrl,
   },
   other: {
     'geo.region': 'ID-JK',
@@ -81,9 +79,8 @@ export default function RootLayout({
     "telephone": "+62-858-5255-5571",
     "email": "info@drwskincare.com",
     "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "DRW Skincare Pusat",
-      "addressLocality": "Jakarta",
+      "@type": "PostalAddress",      "streetAddress": `${SITE_CONFIG.business.name} Pusat`,
+      "addressLocality": SITE_CONFIG.location.area,
       "addressRegion": "DKI Jakarta",
       "postalCode": "10110",
       "addressCountry": "ID"
@@ -110,11 +107,10 @@ export default function RootLayout({
         "@type": "City",
         "name": "Tangerang"
       }
-    ],
-    "founder": {
+    ],    "founder": {
       "@type": "Person",
-      "name": "dr. Wahyu Triasmara, M.Kes AAAM, AIFO-K",
-      "jobTitle": "Dokter & Founder DRW Skincare"
+      "name": SITE_CONFIG.business.founder,
+      "jobTitle": `Dokter & Founder ${SITE_CONFIG.business.name}`
     },
     "medicalSpecialty": [
       "Dermatology",

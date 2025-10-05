@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { SITE_CONFIG, getPageUrl, getCanonicalUrl } from '../../../lib/site-config'
 
 interface Product {
   id: string;
@@ -12,10 +13,9 @@ interface Product {
 }
 
 async function fetchProduct(slug: string): Promise<Product | null> {
-  try {
-    // Use production URL for build time, localhost for development
+  try {    // Use production URL for build time, localhost for development
     const baseUrl = process.env.NODE_ENV === 'production' 
-      ? 'https://drwskincarejakarta.com' 
+      ? SITE_CONFIG.website.baseUrl 
       : 'http://localhost:3000';
       
     const response = await fetch(`${baseUrl}/api/products?slug=${slug}`, {
@@ -45,19 +45,17 @@ export async function generateMetadata({
   params: { slug: string }
 }): Promise<Metadata> {
   const product = await fetchProduct(params.slug);
-
   if (!product) {
     return {
-      title: 'Produk Tidak Ditemukan - DRW Skincare',
-      description: 'Produk yang Anda cari tidak ditemukan di DRW Skincare.',
+      title: `Produk Tidak Ditemukan - ${SITE_CONFIG.business.name}`,
+      description: `Produk yang Anda cari tidak ditemukan di ${SITE_CONFIG.business.name}.`,
     };
   }
-
-  const productImageRelative = product.gambar || product.fotoProduk || '/logo_drwskincare_square.png';
+  const productImageRelative = product.gambar || product.fotoProduk || SITE_CONFIG.images.logoSquare;
   // Ensure absolute URL for Open Graph
   const productImage = productImageRelative.startsWith('http') 
     ? productImageRelative 
-    : `https://drwskincarejakarta.com${productImageRelative}`;
+    : `${SITE_CONFIG.website.baseUrl}${productImageRelative}`;
     
   const productPrice = product.hargaUmum 
     ? new Intl.NumberFormat('id-ID', {
@@ -66,49 +64,44 @@ export async function generateMetadata({
         minimumFractionDigits: 0,
       }).format(product.hargaUmum)
     : 'Hubungi Kami';
-
-  const title = `${product.namaProduk} - ${productPrice} | Produk Kecantikan Skincare DRW Skincare`;
+  const title = `${product.namaProduk} - ${productPrice} | Produk Kecantikan Skincare ${SITE_CONFIG.business.name}`;
   const description = product.deskripsi 
-    ? `${product.deskripsi} - Produk Kecantikan Skincare DRW Skincare dengan formula dokter, harga ${productPrice}. ${product.bpom ? `BPOM: ${product.bpom}` : ''} Produk skincare profesional untuk hasil optimal.`
-    : `${product.namaProduk} - Produk Kecantikan Skincare DRW Skincare dengan formula dokter, harga ${productPrice}. Produk skincare profesional dengan kualitas terjamin dan hasil optimal.`;
+    ? `${product.deskripsi} - Produk Kecantikan Skincare ${SITE_CONFIG.business.name} dengan formula dokter, harga ${productPrice}. ${product.bpom ? `BPOM: ${product.bpom}` : ''} Produk skincare profesional untuk hasil optimal.`
+    : `${product.namaProduk} - Produk Kecantikan Skincare ${SITE_CONFIG.business.name} dengan formula dokter, harga ${productPrice}. Produk skincare profesional dengan kualitas terjamin dan hasil optimal.`;
 
   return {
     title,
-    description,
-    keywords: `${product.namaProduk}, produk kecantikan skincare, DRW skincare jakarta, produk skincare dokter, produk kecantikan profesional, skincare BPOM, perawatan kulit, ${product.bpom ? `BPOM ${product.bpom}` : ''}`,
-    metadataBase: new URL('https://drwskincarejakarta.com'),
+    description,    keywords: `${product.namaProduk}, ${SITE_CONFIG.seo.keywords.product}, ${product.bpom ? `BPOM ${product.bpom}` : ''}`,
+    metadataBase: new URL(SITE_CONFIG.website.baseUrl),
     openGraph: {
       title,
       description,
-      images: [
-        {
+      images: [        {
           url: productImage,
           width: 800,
           height: 600,
-          alt: `${product.namaProduk} - DRW Skincare`,
+          alt: `${product.namaProduk} - ${SITE_CONFIG.business.name}`,
         },
       ],
       type: 'website',
-      siteName: 'DRW Skincare',
-      url: `https://drwskincarejakarta.com/product/${params.slug}`,
+      siteName: SITE_CONFIG.business.name,
+      url: getPageUrl(`/product/${params.slug}`),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       images: [productImage],
-    },
-    alternates: {
-      canonical: `https://drwskincarejakarta.com/product/${params.slug}`,
+    },    alternates: {
+      canonical: getCanonicalUrl(`/product/${params.slug}`),
     },
   };
 }
 
 // Generate static params for better performance
 export async function generateStaticParams() {
-  try {
-    const baseUrl = process.env.NODE_ENV === 'production' 
-      ? 'https://drwskincarejakarta.com' 
+  try {    const baseUrl = process.env.NODE_ENV === 'production' 
+      ? SITE_CONFIG.website.baseUrl 
       : 'http://localhost:3000';
       
     const response = await fetch(`${baseUrl}/api/products`, {
