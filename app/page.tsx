@@ -201,9 +201,9 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <section className="hero bg-gradient-to-r from-pink-50 to-white py-12 md:py-20 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">          <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800 mb-4 md:mb-6 font-mystery-quest">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">          <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800 mb-4 md:mb-6 font-pacifico">
               {SITE_CONFIG.business.tagline}
-            </h1><p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8 font-source-code-pro font-medium">
+            </h1>            <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8 font-montserrat font-medium">
               {SITE_CONFIG.business.description}
             </p>
             <a 
@@ -243,7 +243,7 @@ const LandingPage = () => {
       </section>
 
       {/* Produk Section - Sekarang menampilkan 8 produk */}
-      <section id="produk" className="py-12 md:py-20 px-4 md:px-6 bg-white">        <div className="max-w-6xl mx-auto">          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-8 md:mb-16 font-source-code-pro">
+      <section id="produk" className="py-12 md:py-20 px-4 md:px-6 bg-white">        <div className="max-w-6xl mx-auto">          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-8 md:mb-16 font-montserrat">
             Produk {SITE_CONFIG.business.name}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -275,10 +275,10 @@ const LandingPage = () => {
         </div>
       </section>      {/* Treatment Section */}
       <section id="treatment" className="py-12 md:py-20 px-4 md:px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-4 font-source-code-pro">
+        <div className="max-w-6xl mx-auto">          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-4 font-montserrat">
             Perawatan Unggulan
           </h2>
-          <p className="text-center text-gray-600 mb-8 md:mb-16 text-base md:text-xl font-source-code-pro font-light">
+          <p className="text-center text-gray-600 mb-8 md:mb-16 text-base md:text-xl font-montserrat font-light">
             Treatment profesional untuk kulit sehat dan cantik
           </p>
           
@@ -290,12 +290,12 @@ const LandingPage = () => {
                   <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                </div>                <h3 className="text-xl font-bold text-gray-800 mb-2 font-source-code-pro">Paket Facial Silver</h3>
-                <p className="text-gray-600 text-sm mb-4 font-source-code-pro font-light">Perawatan facial dasar dengan pilihan targeting untuk berbagai jenis kulit</p>
-                <div className="text-2xl font-extrabold text-primary mb-4 font-source-code-pro">Mulai Rp 85.000</div>
+                </div>                <h3 className="text-xl font-bold text-gray-800 mb-2 font-montserrat">Paket Facial Silver</h3>
+                <p className="text-gray-600 text-sm mb-4 font-montserrat font-light">Perawatan facial dasar dengan pilihan targeting untuk berbagai jenis kulit</p>
+                <div className="text-2xl font-extrabold text-primary mb-4 font-montserrat">Mulai Rp 85.000</div>
               </div>
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2 font-source-code-pro">Manfaat Utama:</h4>
+                <h4 className="font-semibold text-gray-700 mb-2 font-montserrat">Manfaat Utama:</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Membersihkan kotoran & minyak berlebih</li>
                   <li>• Menyegarkan kulit agar tampak glowing</li>
@@ -447,10 +447,10 @@ const LandingPage = () => {
 
       {/* Konsultasi Section */}
       <section id="konsultasi" className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-r from-primary to-pink-600">        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-4 md:mb-6 font-source-code-pro">
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-4 md:mb-6 font-montserrat">
             Konsultasi Gratis dengan Ahli Kulit
           </h2>
-          <p className="text-base md:text-xl mb-6 md:mb-8 font-source-code-pro font-medium">
+          <p className="text-base md:text-xl mb-6 md:mb-8 font-montserrat font-medium">
             Tanya ahli kami seputar perawatan kulit yang tepat untukmu!
           </p>
           <a 
@@ -464,7 +464,7 @@ const LandingPage = () => {
 
       {/* Testimoni Section */}
       <section className="py-12 md:py-20 px-4 md:px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-8 md:mb-16 font-source-code-pro">
+        <div className="max-w-6xl mx-auto">          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-800 mb-8 md:mb-16 font-montserrat">
             Apa Kata Mereka?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">

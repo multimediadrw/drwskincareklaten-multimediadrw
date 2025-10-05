@@ -1,19 +1,18 @@
 import './globals.css'
 import '../lib/fontawesome'
-import { Inter, Mystery_Quest, Source_Code_Pro } from 'next/font/google'
+import { Pacifico, Montserrat } from 'next/font/google'
 import FloatingWhatsApp from '../components/FloatingWhatsApp'
 import { SITE_CONFIG } from '../lib/site-config'
 
-const inter = Inter({ subsets: ['latin'] })
-const mysteryQuest = Mystery_Quest({ 
+const pacifico = Pacifico({ 
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-mystery-quest',
+  variable: '--font-pacifico',
 })
-const sourceCodePro = Source_Code_Pro({ 
+const montserrat = Montserrat({ 
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-source-code-pro',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
 })
 
 export const viewport = {
@@ -144,7 +143,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" />
         <script async src="https://www.tiktok.com/embed.js"></script>
       </head>
-      <body className={`${inter.className} ${mysteryQuest.variable} ${sourceCodePro.variable}`}>
+      <body className={`${montserrat.className} ${pacifico.variable} ${montserrat.variable}`}>
         {children}
         <FloatingWhatsApp />
       </body>

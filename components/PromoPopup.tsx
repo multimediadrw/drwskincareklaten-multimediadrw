@@ -51,7 +51,7 @@ const PromoPopup: React.FC<PromoPopupProps> = ({ isOpen, onClose }) => {
             <div className="bg-white/20 rounded-full p-3 inline-block mb-3">
               <FontAwesomeIcon icon={faGift} className="text-2xl text-white" />
             </div>
-            <h2 className="text-xl font-extrabold font-source-code-pro mb-2">
+            <h2 className="text-xl font-extrabold font-montserrat mb-2">
                Promo Spesial!
             </h2>
           </div>
@@ -66,10 +66,10 @@ const PromoPopup: React.FC<PromoPopupProps> = ({ isOpen, onClose }) => {
                 <FontAwesomeIcon icon={faCalendarAlt} className="text-white text-sm" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 font-source-code-pro text-sm">
+                <h3 className="font-bold text-gray-800 font-montserrat text-sm">
                   Jumat Berkah
                 </h3>
-                <p className="text-gray-600 text-xs font-source-code-pro font-light leading-relaxed">
+                <p className="text-gray-600 text-xs font-montserrat font-light leading-relaxed">
                   Setiap hari <span className="font-semibold text-blue-600">Jumat</span>
                   <span className="font-bold text-blue-600"> diskon 15%</span> semua treatment!
                 </p>
@@ -84,10 +84,10 @@ const PromoPopup: React.FC<PromoPopupProps> = ({ isOpen, onClose }) => {
                 <FontAwesomeIcon icon={faUsers} className="text-white text-sm" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 font-source-code-pro text-sm">
+                <h3 className="font-bold text-gray-800 font-montserrat text-sm">
                   Ajak Sahabat
                 </h3>
-                <p className="text-gray-600 text-xs font-source-code-pro font-light leading-relaxed">
+                <p className="text-gray-600 text-xs font-montserrat font-light leading-relaxed">
                   Ajak teman treatment dapatkan
                   <span className="font-bold text-green-600"> diskon 15%</span> untuk berdua!
                 </p>
@@ -102,10 +102,10 @@ const PromoPopup: React.FC<PromoPopupProps> = ({ isOpen, onClose }) => {
                 <FontAwesomeIcon icon={faIdCard} className="text-white text-sm" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 font-source-code-pro text-sm">
+                <h3 className="font-bold text-gray-800 font-montserrat text-sm">
                   Member VIP
                 </h3>
-                <p className="text-gray-600 text-xs font-source-code-pro font-light leading-relaxed">
+                <p className="text-gray-600 text-xs font-montserrat font-light leading-relaxed">
                   Pemegang kartu member mendapat 
                   <span className="font-bold text-purple-600"> diskon 10%</span> setiap kunjungan!
                 </p>
@@ -121,7 +121,7 @@ const PromoPopup: React.FC<PromoPopupProps> = ({ isOpen, onClose }) => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={onClose}
-            className="flex-1 py-3 px-4 bg-gradient-to-r from-primary to-pink-600 text-white rounded-lg font-source-code-pro font-bold text-sm hover:from-pink-600 hover:to-pink-700 transition-all text-center"
+            className="flex-1 py-3 px-4 bg-gradient-to-r from-primary to-pink-600 text-white rounded-lg font-montserrat font-bold text-sm hover:from-pink-600 hover:to-pink-700 transition-all text-center"
           >
             Tanya Promo
           </a>
