@@ -64,7 +64,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <FontAwesomeIcon icon={faFacebook} className="text-blue-400 w-5 h-5" />
                 <a href={SITE_CONFIG.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  M'Beauty Aesthetic Drw Skincare
+                  M&apos;Beauty Aesthetic Drw Skincare
                 </a>
               </div>
 
