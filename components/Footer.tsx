@@ -64,15 +64,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <FontAwesomeIcon icon={faFacebook} className="text-blue-400 w-5 h-5" />
                 <a href={SITE_CONFIG.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  Mega Ukang
-                </a>
-              </div>
-
-              {/* YouTube */}
-              <div className="flex items-center space-x-3">
-                <FontAwesomeIcon icon={faYoutube} className="text-red-500 w-5 h-5" />
-                <a href={SITE_CONFIG.socialMedia.youtube} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  @megaminochan8879
+                  M'Beauty Aesthetic Drw Skincare
                 </a>
               </div>
 
