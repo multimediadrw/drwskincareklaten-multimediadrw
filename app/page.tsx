@@ -9,8 +9,10 @@ import Footer from '@/components/Footer';
 import SafeImage from '@/components/SafeImage';
 // import PromoPopup from '@/components/PromoPopup'; // DISABLED
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { SITE_CONFIG, getWhatsAppUrl } from '../lib/site-config';
+import { faShoppingCart, faMapMarkerAlt, faEnvelope, faPhone, faSpa, faGem, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { SITE_CONFIG, getWhatsAppUrl, getTreatmentWhatsAppUrl } from '../lib/site-config';
+import menuPerawatan from '../menu_perawatan.json';
 
 interface Product {
   id: string;
@@ -34,9 +36,23 @@ interface StaticProduct {
   bgColor?: string;
 }
 
+interface Treatment {
+  name: string;
+  price: number;
+  description: string;
+  benefit: string;
+}
+
+interface TreatmentCategory {
+  [key: string]: Treatment[];
+}
+
 const LandingPage = () => {
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);  // DISABLED: PromoPopup functionality
+  const [loading, setLoading] = useState(true);
+  
+  // Treatment data from JSON
+  const treatmentData: TreatmentCategory = menuPerawatan;  // DISABLED: PromoPopup functionality
   // const [showPromoPopup, setShowPromoPopup] = useState(false);
   // const [mounted, setMounted] = useState(false);
 
@@ -83,6 +99,61 @@ const LandingPage = () => {
       currency: 'IDR',
       minimumFractionDigits: 0,
     }).format(Number(price));
+  };
+
+  // Format price for treatments
+  const formatTreatmentPrice = (price: number) => {
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      minimumFractionDigits: 0,
+    }).format(price);
+  };
+
+  // Get category colors for treatments
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      'Facial Standart': 'bg-blue-100 text-blue-700',
+      'Paket Facial Basic': 'bg-green-100 text-green-700',
+      'Cauter': 'bg-purple-100 text-purple-700',
+      'Paket Facial Premium': 'bg-pink-100 text-pink-700',
+      'Paket Best Seller': 'bg-yellow-100 text-yellow-700',
+      'Paket Super Hemat': 'bg-red-100 text-red-700'
+    };
+    return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-700';
+  };
+
+  // Handle WhatsApp booking for treatments
+  const handleWhatsAppBooking = (treatmentName: string, price: number) => {
+    const formattedPrice = formatTreatmentPrice(price);
+    const url = getTreatmentWhatsAppUrl(treatmentName, formattedPrice);
+    window.open(url, '_blank');
+  };
+
+  // Get featured treatments from each category
+  const getFeaturedTreatments = () => {
+    const featured: { category: string; treatments: Treatment[] }[] = [];
+    
+    Object.entries(treatmentData).forEach(([category, treatments]) => {
+      // Get 1-2 popular treatments from each category
+      let selectedTreatments: Treatment[] = [];
+      
+      if (category === 'Paket Best Seller') {
+        selectedTreatments = treatments.slice(0, 2); // Show 2 from best seller
+      } else if (category === 'Facial Standart') {
+        selectedTreatments = treatments.slice(0, 1); // Show 1 from basic
+      } else if (category === 'Paket Super Hemat') {
+        selectedTreatments = treatments.slice(-2); // Show last 2 premium treatments
+      } else if (category === 'Paket Facial Premium') {
+        selectedTreatments = treatments.slice(0, 1); // Show 1 premium
+      }
+      
+      if (selectedTreatments.length > 0) {
+        featured.push({ category, treatments: selectedTreatments });
+      }
+    });
+    
+    return featured;
   };
 
   // Static products to fill remaining slots (melanjutkan dari produk API)
@@ -279,165 +350,91 @@ const LandingPage = () => {
             Perawatan Unggulan
           </h2>
           <p className="text-center text-gray-600 mb-8 md:mb-16 text-base md:text-xl font-montserrat font-light">
-            Treatment profesional untuk kulit sehat dan cantik
+            Treatment profesional untuk kulit sehat dan cantik dengan hasil terbaik
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Paket Facial Silver */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>                <h3 className="text-xl font-bold text-gray-800 mb-2 font-montserrat">Paket Facial Silver</h3>
-                <p className="text-gray-600 text-sm mb-4 font-montserrat font-light">Perawatan facial dasar dengan pilihan targeting untuk berbagai jenis kulit</p>
-                <div className="text-2xl font-extrabold text-primary mb-4 font-montserrat">Mulai Rp 85.000</div>
-              </div>
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2 font-montserrat">Manfaat Utama:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Membersihkan kotoran & minyak berlebih</li>
-                  <li>• Menyegarkan kulit agar tampak glowing</li>
-                  <li>• Meningkatkan sirkulasi darah wajah</li>
-                </ul>
-              </div>
-              <Link href="/treatment" className="block w-full bg-primary text-white py-3 rounded-lg text-center hover:bg-pink-600 transition-colors">
-                Lihat Detail & Booking
-              </Link>
-            </div>
-            
-            {/* Facial Triple Premium */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+          {/* Treatment Categories */}
+          <div className="space-y-12">
+            {getFeaturedTreatments().map(({ category, treatments }) => (
+              <div key={category} className="mb-12">
+                {/* Category Header */}
+                <div className="text-center mb-8">
+                  <div className={`inline-block px-6 py-2 rounded-full text-sm font-semibold mb-4 ${getCategoryColor(category)}`}>
+                    {category}
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 font-montserrat">
+                    {category}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Facial Triple Premium</h3>
-                <p className="text-gray-600 text-sm mb-4">Perawatan lengkap dengan teknologi advanced dan totok wajah</p>
-                <div className="text-2xl font-bold text-primary mb-4">Mulai Rp 175.000</div>
-              </div>
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Manfaat Utama:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Menghaluskan tekstur & bekas halus</li>
-                  <li>• Mencerahkan kulit kusam</li>
-                  <li>• Mendukung produksi kolagen alami</li>
-                </ul>
-              </div>
-              <Link href="/treatment" className="block w-full bg-primary text-white py-3 rounded-lg text-center hover:bg-pink-600 transition-colors">
-                Lihat Detail & Booking
-              </Link>
-            </div>
-            
-            {/* Paket Facial Combo Premium */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Facial Combo Premium</h3>
-                <p className="text-gray-600 text-sm mb-4">Kombinasi multi-teknologi untuk hasil maksimal dan anti-aging</p>
-                <div className="text-2xl font-bold text-primary mb-4">Mulai Rp 235.000</div>
-              </div>
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Manfaat Utama:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Kulit terasa lebih halus & bercahaya</li>
-                  <li>• Membantu menyamarkan kusam & pori</li>
-                  <li>• Memberi efek firming ringan</li>
-                </ul>
-              </div>
-              <Link href="/treatment" className="block w-full bg-primary text-white py-3 rounded-lg text-center hover:bg-pink-600 transition-colors">
-                Lihat Detail & Booking
-              </Link>
-            </div>
 
-            {/* Tindakan Medis */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1v-2z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Tindakan Medis</h3>
-                <p className="text-gray-600 text-sm mb-4">Injeksi booster, dermapen, dan tindakan medis profesional</p>
-                <div className="text-2xl font-bold text-primary mb-4">Mulai Rp 35.000</div>
-              </div>
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Manfaat Utama:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Membantu hidrasi dan kekenyalan kulit</li>
-                  <li>• Mendukung perbaikan skin barrier</li>
-                  <li>• Meratakan tekstur kulit</li>
-                </ul>
-              </div>
-              <Link href="/treatment" className="block w-full bg-primary text-white py-3 rounded-lg text-center hover:bg-pink-600 transition-colors">
-                Lihat Detail & Booking
-              </Link>
-            </div>
+                {/* Treatment Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {treatments.map((treatment: Treatment, index: number) => (
+                    <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">
+                      <div className="p-6">
+                        {/* Category Badge */}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className={`px-3 py-1 rounded-full text-xs font-semibold ${getCategoryColor(category)} shrink-0`}>
+                            {category}
+                          </div>
+                          <div className="flex items-center text-primary">
+                            <FontAwesomeIcon icon={faSpa} className="mr-1" />
+                            <span className="text-sm font-medium">Premium</span>
+                          </div>
+                        </div>
+                        
+                        {/* Treatment Name */}
+                        <h4 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors font-montserrat">
+                          {treatment.name}
+                        </h4>
+                        
+                        {/* Price */}
+                        <div className="text-2xl font-bold text-primary mb-4 font-montserrat">
+                          {formatTreatmentPrice(treatment.price)}
+                        </div>
+                        
+                        {/* Description */}
+                        <div className="mb-4">
+                          <div className="flex items-center mb-2">
+                            <FontAwesomeIcon icon={faGem} className="text-primary mr-2 text-sm" />
+                            <span className="text-sm font-semibold text-gray-700">Deskripsi:</span>
+                          </div>
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            {treatment.description}
+                          </p>
+                        </div>
 
-            {/* Body Treatment */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 10a6 6 0 1112 0v3a1 1 0 11-2 0v-3a4 4 0 10-8 0v3a1 1 0 11-2 0v-3z" clipRule="evenodd" />
-                  </svg>
+                        {/* Benefit */}
+                        <div className="mb-6">
+                          <div className="flex items-center mb-2">
+                            <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 mr-2 text-sm" />
+                            <span className="text-sm font-semibold text-gray-700">Manfaat:</span>
+                          </div>
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            {treatment.benefit}
+                          </p>
+                        </div>
+                        
+                        {/* Booking Button */}
+                        <button
+                          onClick={() => handleWhatsAppBooking(treatment.name, treatment.price)}
+                          className="w-full bg-gradient-to-r from-primary to-pink-600 text-white py-3 px-6 rounded-lg hover:from-pink-600 hover:to-pink-700 transition-all duration-300 font-semibold flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                        >                          <FontAwesomeIcon icon={faWhatsapp} />
+                          Booking Perawatan
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Body Treatment</h3>
-                <p className="text-gray-600 text-sm mb-4">IPL hair removal, perawatan punggung, manicure pedicure</p>
-                <div className="text-2xl font-bold text-primary mb-4">Mulai Rp 100.000</div>
               </div>
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Manfaat Utama:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Rambut tumbuh lebih lambat dan halus</li>
-                  <li>• Kulit terasa lebih bersih</li>
-                  <li>• Tampilan lebih rapi dan terawat</li>
-                </ul>
-              </div>
-              <Link href="/treatment" className="block w-full bg-primary text-white py-3 rounded-lg text-center hover:bg-pink-600 transition-colors">
-                Lihat Detail & Booking
-              </Link>
-            </div>
-
-            {/* Hair Treatment */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.06A3 3 0 009 8.172z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Hair Treatment</h3>
-                <p className="text-gray-600 text-sm mb-4">Perawatan rambut dan kulit kepala untuk kesehatan optimal</p>
-                <div className="text-2xl font-bold text-primary mb-4">Mulai Rp 55.000</div>
-              </div>
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Manfaat Utama:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Membersihkan kulit kepala & rambut</li>
-                  <li>• Memberi rasa rileks pada kepala</li>
-                  <li>• Rambut terasa lebih lembut</li>
-                </ul>
-              </div>
-              <Link href="/treatment" className="block w-full bg-primary text-white py-3 rounded-lg text-center hover:bg-pink-600 transition-colors">
-                Lihat Detail & Booking
-              </Link>
-            </div>
+            ))}
           </div>
           
           {/* View All Treatments Button */}
           <div className="text-center mt-8 md:mt-12">
             <Link 
               href="/treatment" 
-              className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg hover:bg-pink-600 transition-colors inline-block"
+              className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg hover:bg-pink-600 transition-colors inline-block font-montserrat"
             >
               Lihat Semua Perawatan
             </Link>
