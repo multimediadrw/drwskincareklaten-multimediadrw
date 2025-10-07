@@ -1,4 +1,4 @@
-# DRW Skincare Jakarta & Bekasi
+# DRW Skincare Klaten
 
 Selamat datang di website DRW Skincare - solusi perawatan kulit terbaik dengan produk berkualitas dan konsultasi profesional untuk Jakarta dan Bekasi.
 
@@ -36,7 +36,7 @@ npm run dev
 ## Struktur Project
 
 ```
-drw-skincare-jakarta-bekasi/
+drw-skincare-klaten/
 ├── app/
 │   ├── globals.css
 │   ├── layout.tsx
