@@ -22,12 +22,17 @@ interface Product {
   hargaDirector: number | null;
   hargaManager: number | null;
   hargaSupervisor: number | null;
-  gambar: string | null;
-  fotoProduk: Array<{
+  gambar: string | null;  fotoProduk: Array<{
     url: string;
     alt: string | null;
     urutan: number;
   }> | null;
+  foto_produk?: Array<{
+    id_foto: string;
+    url_foto: string;
+    alt_text: string | null;
+    urutan: number;
+  }>;
   slug: string;
   bpom?: string | null;
   type?: 'product' | 'package';
@@ -107,10 +112,11 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       const result = await response.json();
       
       if (result.success && result.data.length > 0) {
-        const productData = result.data[0];
-        setProduct(productData);
-        // Set default selected image
-        const mainImage = productData.gambar || (productData.fotoProduk && productData.fotoProduk[0]?.url) || '/logo_drwskincare_square.png';
+        const productData = result.data[0];        setProduct(productData);
+        // Set default selected image - prioritize foto_produk table
+        const mainImage = (productData.foto_produk && productData.foto_produk.length > 0) 
+          ? productData.foto_produk[0].url_foto
+          : productData.gambar || (productData.fotoProduk && productData.fotoProduk[0]?.url) || '/logo_drwskincare_square.png';
         setSelectedImage(mainImage);
       } else {
         setError('Produk tidak ditemukan');
@@ -220,52 +226,72 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {/* Product Images */}
             <div className="space-y-4">
-              {/* Main Image */}
-              <div className="relative">
+              {/* Main Image */}              <div className="relative">
                 <SafeImage 
-                  src={selectedImage || '/logo_drwskincare_square.png'} 
-                  alt={product.namaProduk} 
+                  src={selectedImage || (product.foto_produk && product.foto_produk.length > 0 ? product.foto_produk[0].url_foto : '/logo_drwskincare_square.png')} 
+                  alt={selectedImage === (product.foto_produk && product.foto_produk.length > 0 ? product.foto_produk[0].url_foto : product.namaProduk) 
+                    ? (product.foto_produk && product.foto_produk.length > 0 && product.foto_produk[0].alt_text ? product.foto_produk[0].alt_text : product.namaProduk)
+                    : product.namaProduk} 
                   width={600} 
                   height={600} 
                   className="rounded-lg shadow-lg w-full object-cover h-[600px]" 
                   onError={() => setImageError(true)}
                 />
               </div>
-              
-              {/* Thumbnail Images */}
-              {product.fotoProduk && product.fotoProduk.length > 0 && (
+                {/* Thumbnail Images */}
+              {((product.foto_produk && product.foto_produk.length > 0) || (product.fotoProduk && product.fotoProduk.length > 0)) && (
                 <div className="grid grid-cols-4 gap-2">
-                  {/* Main image thumbnail */}
-                  {product.gambar && (
-                    <div 
-                      className={`cursor-pointer rounded-lg overflow-hidden ${selectedImage === product.gambar ? 'ring-2 ring-primary' : ''}`}
-                      onClick={() => setSelectedImage(product.gambar!)}
-                    >
-                      <SafeImage 
-                        src={product.gambar} 
-                        alt={product.namaProduk} 
-                        width={150} 
-                        height={150} 
-                        className="w-full h-24 object-cover hover:opacity-80 transition-opacity" 
-                      />
-                    </div>
-                  )}
-                  {/* Additional photos */}
-                  {product.fotoProduk.slice(0, product.gambar ? 3 : 4).map((foto, index) => (
-                    <div 
-                      key={index}
-                      className={`cursor-pointer rounded-lg overflow-hidden ${selectedImage === foto.url ? 'ring-2 ring-primary' : ''}`}
-                      onClick={() => setSelectedImage(foto.url)}
-                    >
-                      <SafeImage 
-                        src={foto.url} 
-                        alt={foto.alt || `${product.namaProduk} ${index + 1}`} 
-                        width={150} 
-                        height={150} 
-                        className="w-full h-24 object-cover hover:opacity-80 transition-opacity" 
-                      />
-                    </div>
-                  ))}
+                  {/* Prioritize foto_produk table, fallback to old fotoProduk array */}
+                  {product.foto_produk && product.foto_produk.length > 0 ? (
+                    product.foto_produk.slice(0, 4).map((foto, index) => (
+                      <div 
+                        key={foto.id_foto}
+                        className={`cursor-pointer rounded-lg overflow-hidden ${selectedImage === foto.url_foto ? 'ring-2 ring-primary' : ''}`}
+                        onClick={() => setSelectedImage(foto.url_foto)}
+                      >
+                        <SafeImage 
+                          src={foto.url_foto} 
+                          alt={foto.alt_text || `${product.namaProduk} ${index + 1}`} 
+                          width={150} 
+                          height={150} 
+                          className="w-full h-24 object-cover hover:opacity-80 transition-opacity"
+                        />
+                      </div>
+                    ))
+                  ) : product.fotoProduk && product.fotoProduk.length > 0 ? (
+                    <>
+                      {/* Main image thumbnail */}
+                      {product.gambar && (
+                        <div 
+                          className={`cursor-pointer rounded-lg overflow-hidden ${selectedImage === product.gambar ? 'ring-2 ring-primary' : ''}`}
+                          onClick={() => setSelectedImage(product.gambar!)}
+                        >
+                          <SafeImage 
+                            src={product.gambar} 
+                            alt={product.namaProduk} 
+                            width={150} 
+                            height={150} 
+                            className="w-full h-24 object-cover hover:opacity-80 transition-opacity" 
+                          />
+                        </div>
+                      )}
+                      {/* Additional photos */}
+                      {product.fotoProduk.slice(0, product.gambar ? 3 : 4).map((foto, index) => (
+                        <div 
+                          key={index}
+                          className={`cursor-pointer rounded-lg overflow-hidden ${selectedImage === foto.url ? 'ring-2 ring-primary' : ''}`}
+                          onClick={() => setSelectedImage(foto.url)}
+                        >                          <SafeImage 
+                            src={foto.url} 
+                            alt={foto.alt || `${product.namaProduk} ${index + 1}`} 
+                            width={150} 
+                            height={150} 
+                            className="w-full h-24 object-cover hover:opacity-80 transition-opacity"
+                          />
+                        </div>
+                      ))}
+                    </>
+                  ) : null}
                 </div>
               )}
             </div>

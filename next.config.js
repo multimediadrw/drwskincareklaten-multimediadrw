@@ -21,10 +21,13 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'via.placeholder.com',
+      },      {
+        protocol: 'https',
+        hostname: 'drwgroup.id',
       },
       {
         protocol: 'https',
-        hostname: 'drwgroup.id',
+        hostname: 'storage.googleapis.com',
       },
     ],
     dangerouslyAllowSVG: true,

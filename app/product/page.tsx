@@ -67,12 +67,17 @@ interface Product {
   hargaDirector: number | null;
   hargaManager: number | null;
   hargaSupervisor: number | null;
-  gambar: string | null;
-  fotoProduk: Array<{
+  gambar: string | null;  fotoProduk: Array<{
     url: string;
     alt: string | null;
     urutan: number;
   }> | null;
+  foto_produk?: Array<{
+    id_foto: string;
+    url_foto: string;
+    alt_text: string | null;
+    urutan: number;
+  }>;
   slug: string;
   bpom: string | null;
   type: 'product' | 'package';
@@ -444,24 +449,32 @@ const ProductPage = () => {
                   key={product.id} 
                   className="bg-white rounded-lg md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-primary/30 group cursor-pointer transform hover:scale-[1.02] active:scale-[0.98] hover:-translate-y-1 shimmer-effect"
                 >
-                  {/* Product Image */}
-                  <div className="relative h-32 md:h-48 bg-gray-100 overflow-hidden">
-                    {product.gambar && !imageErrors.has(product.id) ? (
-                      <Image
-                        src={product.gambar}
-                        alt={product.namaProduk}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                        onError={() => handleImageError(product.id)}
-                      />
-                    ) : (
-                      <div className="flex items-center justify-center h-full group-hover:scale-110 transition-transform duration-500">
-                        <div className="text-gray-400 text-center">
-                          <FontAwesomeIcon icon={faShoppingCart} className="text-4xl mb-2 group-hover:text-primary transition-colors duration-300" />
-                          <div className="text-sm group-hover:text-primary transition-colors duration-300">Foto Produk</div>
+                  {/* Product Image */}                  <div className="relative h-32 md:h-48 bg-gray-100 overflow-hidden">
+                    {(() => {
+                      // Priority: foto_produk table, then fallback to gambar field
+                      const imageUrl = (product.foto_produk && product.foto_produk.length > 0) 
+                        ? product.foto_produk[0].url_foto
+                        : product.gambar;
+                      const altText = (product.foto_produk && product.foto_produk.length > 0 && product.foto_produk[0].alt_text)
+                        ? product.foto_produk[0].alt_text
+                        : product.namaProduk;
+                      
+                      return imageUrl && !imageErrors.has(product.id) ? (
+                        <Image
+                          src={imageUrl}
+                          alt={altText}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          onError={() => handleImageError(product.id)}                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full group-hover:scale-110 transition-transform duration-500">
+                          <div className="text-gray-400 text-center">
+                            <FontAwesomeIcon icon={faShoppingCart} className="text-4xl mb-2 group-hover:text-primary transition-colors duration-300" />
+                            <div className="text-sm group-hover:text-primary transition-colors duration-300">Foto Produk</div>
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      );
+                    })()}
                     
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500"></div>

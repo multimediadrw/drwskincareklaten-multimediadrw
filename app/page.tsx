@@ -25,6 +25,12 @@ interface Product {
   categories?: {
     name: string;
   } | null;
+  foto_produk?: Array<{
+    id_foto: string;
+    url_foto: string;
+    alt_text: string | null;
+    urutan: number;
+  }>;
 }
 
 interface StaticProduct {
@@ -195,11 +201,19 @@ const LandingPage = () => {
     // Jika produk real dan punya foto, buat clickable link ke detail
     if (!isStatic && (realProduct.gambar || realProduct.fotoProduk) && realProduct.slug) {
       return (
-        <Link key={product.id} href={`/product/${realProduct.slug}`} className="bg-white rounded-lg md:rounded-2xl shadow-lg p-3 md:p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 group cursor-pointer">
-          <div className="relative w-full h-32 md:h-48 mb-3 md:mb-4">
+        <Link key={product.id} href={`/product/${realProduct.slug}`} className="bg-white rounded-lg md:rounded-2xl shadow-lg p-3 md:p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 group cursor-pointer">          <div className="relative w-full h-32 md:h-48 mb-3 md:mb-4">
             <Image 
-              src={realProduct.gambar || realProduct.fotoProduk || ''} 
-              alt={realProduct.namaProduk} 
+              src={
+                // Priority: foto_produk table (first image by urutan), then fallback to old fields
+                (realProduct.foto_produk && realProduct.foto_produk.length > 0) 
+                  ? realProduct.foto_produk[0].url_foto
+                  : realProduct.gambar || realProduct.fotoProduk || ''
+              } 
+              alt={
+                (realProduct.foto_produk && realProduct.foto_produk.length > 0 && realProduct.foto_produk[0].alt_text)
+                  ? realProduct.foto_produk[0].alt_text
+                  : realProduct.namaProduk
+              } 
               fill
               className="object-cover rounded-xl group-hover:scale-110 transition-transform duration-300"
             />

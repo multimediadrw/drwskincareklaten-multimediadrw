@@ -1,0 +1,1502 @@
+{
+  "problematic": [
+    {
+      "id": "1754869226",
+      "name": "Acne Cream 1 New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754869226/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    },
+    {
+      "id": "1753290254",
+      "name": "Day Acne Cream 3 New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753290254/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    },
+    {
+      "id": "1753510360",
+      "name": "Serum Brightening With Vit C and E New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753510360/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    },
+    {
+      "id": "1753366653",
+      "name": "Paket Glowing Ceramoist",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753366653/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    },
+    {
+      "id": "1754907008",
+      "name": "Paket Goats Milk Series",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754907008/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    },
+    {
+      "id": "1753460518",
+      "name": "Paket Serum Custom",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753460518/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    },
+    {
+      "id": "1753366792",
+      "name": "Paket Snail Cream",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753366792/foto",
+      "foto_produk_count": 0,
+      "has_old_url": true,
+      "has_new_images": false
+    }
+  ],
+  "old_with_new": [
+    {
+      "id": "1745244608",
+      "name": "3 in 1 Exfoliating Gel 100 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1745244608/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686664757",
+      "name": "Acne Cream 1 (10,5g)",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686664757/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686664869",
+      "name": "Acne Cream 2 (10,5g)",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686664869/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754133203",
+      "name": "Acne Cream 2 New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754133203/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1752079412",
+      "name": "Acne Cream 3 New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1752079412/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1751457520",
+      "name": "Amour Matte Lip Cream 01 Mauvelous",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1751457520/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1751457698",
+      "name": "Amour Matte Lip Cream 02 Ember",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1751457698/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1751457776",
+      "name": "Amour Matte Lip Cream 03 Crimson",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1751457776/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1751457878",
+      "name": "Amour Matte Lip Cream 04 Coraline",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1751457878/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692202832",
+      "name": "Anti Aging Eye Gel",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1692202832/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1680104190",
+      "name": "Bamboo Charcoal Soap Premium",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1680104190/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686234607",
+      "name": "BB Cream Air Cushion Shade Ivory",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686234607/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1667643468",
+      "name": "Beauty DNA Salmon Spray",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1667643468/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1744880534",
+      "name": "Body Lotion Tone Up 100 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1744880534/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1582905086",
+      "name": "Breast Cream",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1582905086/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754132892",
+      "name": "Brightening Cream 1 With Licorice Plus Astaxanthin",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754132892/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754133125",
+      "name": "Brightening Cream 2 Alpha Arbutin + Shea Butter",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754133125/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686666867",
+      "name": "Brightening Cream 3 Azeloglicina",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686666867/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1745245030",
+      "name": "Brightening Peel Off Mask with Charcoal 60 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1745245030/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1744628110",
+      "name": "Chamomile Face Toner 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1744628110/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1744628195",
+      "name": "Chamomile Face Toner 63 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1744628195/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686153282",
+      "name": "Cleansing Milk With Green Tea 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686153282/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686153376",
+      "name": "Cleansing Milk With Green Tea 63 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686153376/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1582905109",
+      "name": "Compact Powder Natural Whitening",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1582905109/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1734427589",
+      "name": "Coolbright Deo Herba",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1734427589/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1734425662",
+      "name": "Coolbright Deo Herba Strong",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1734425662/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1711441226",
+      "name": "Daily Ceramoist Hydra Gel",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1711441226/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692269608",
+      "name": "Daily Compact Powder Beige",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1627310880/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1683473518",
+      "name": "Daily Compact Powder Natural",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1683473518/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692270850",
+      "name": "Daily Compact Powder Pink",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1627310799/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686665545",
+      "name": "Day Acne Cream 1",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686665545/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747321421",
+      "name": "Day Acne Cream 1 New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747321421/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686665675",
+      "name": "Day Acne Cream 2",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686665675/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747321498",
+      "name": "Day Acne Cream 2 New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747321498/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1683473899",
+      "name": "Day Body Lotion Premium 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1683473899/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692205262",
+      "name": "Day Pink Cream",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1692205262/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1749608495",
+      "name": "Day Pink Cream New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1749608495/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686666415",
+      "name": "Day White Cream (10,5g)",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686666415/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747734879",
+      "name": "Day White Cream New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747734879/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747824072",
+      "name": "D Etawa Susu Etawa Plus Collagen Rasa Brown Sugar",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747824072/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747824225",
+      "name": "D Etawa Susu Etawa Plus Collagen Rasa Original Stevia",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747824225/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747669999",
+      "name": "D Etawa Susu Etawa Plus Collagen Rasa Strawberry",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747669999/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1726937179",
+      "name": "DNA Salmon Extra Marine Collagen and Hyaluronic Acid 30 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1726937179/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754870068",
+      "name": "DRW Goats Milk Body Lotion",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754870068/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754870117",
+      "name": "DRW Goats Milk Body Scrub",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754870117/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754869712",
+      "name": "DRW Goats Milk Body Wash",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754869712/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1730734406",
+      "name": "DRW Kapsul Gemuk Badan isi 60",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1730734406/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1730734677",
+      "name": "DRW Slimming Capsule isi 60",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1730734677/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1758208798",
+      "name": "Exfoliating Complex Toner AHA BHA PHA",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1758208798/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1682786647",
+      "name": "Exfoliating Strawberry Gel",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1682786647/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1665043629",
+      "name": "Face Mist Centella Asiatica",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1665043629/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1691504856",
+      "name": "Facial Wash For Normal Skin 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1691504856/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1746020386",
+      "name": "Facial Wash For Normal Skin 63 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1746020386/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1681205194",
+      "name": "Facial Wash Oily Acne 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1681205194/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747318225",
+      "name": "Facial Wash Oily Acne 63 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747318225/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1681206287",
+      "name": "Facial Wash Pink Brightening 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1681206287/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1744641761",
+      "name": "Facial Wash Pink Brightening 110 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1744641761/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1639747117",
+      "name": "Facial Wash Pink Brightening 63 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1639747117/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1747318458",
+      "name": "Facial Wash Pink Brightening 63 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1747318458/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1744627909",
+      "name": "Facial Wash Tea Tree Oil 110 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1744627909/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1639068047",
+      "name": "Facial Wash Tea Tree Oil 63 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1639068047/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1626704712",
+      "name": "Facial Wash Tea Tree Oil For Men",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1626704712/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1626704135",
+      "name": "Facial Wash White For Men",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1626704135/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686234525",
+      "name": "Flawless BB Cushion",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686234525/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1755012482",
+      "name": "Flyer DRW Skincare",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1755012482/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1755011378",
+      "name": "Glow Magazine Vol 1 Juni 2025",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1755011378/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1755011702",
+      "name": "Glow Magazine Vol 2 Juli 2025",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1755011702/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686152599",
+      "name": "Green Tea Face Mask Premium",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686152599/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1582905111",
+      "name": "Hair Serum Premium",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1582905111/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1691245963",
+      "name": "Hair Tonic Normal 220 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1691245963/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1680103424",
+      "name": "Hand Body Night Yellow Plus Licorice",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1680103424/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1743086683",
+      "name": "HB Dosting 75 gram",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1743086683/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1754298073",
+      "name": "Hydrating Essence Toner 10x Amino Acid",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1754298073/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1755362232",
+      "name": "Katalog Produk 2025 Vol 2",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1755362232/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1671983635",
+      "name": "Kojic Acid Milk Soap",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1671983635/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1672312386",
+      "name": "Lipgloss Beauty Gold",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1672312386/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741681922",
+      "name": "Lipgloss Beauty Gold + Vit E",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741681922/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1679411981",
+      "name": "Lipgloss Beauty Pink",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1679411981/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741683008",
+      "name": "Lipgloss Beauty Pink + Vit E",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741683008/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741605353",
+      "name": "Lips Care New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741605353/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1583925787",
+      "name": "Lips Cream Matte 2 Red",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1583925787/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1583926072",
+      "name": "Lips Cream Matte 3 Brown",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1583926072/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1583926512",
+      "name": "Lips Cream Matte 4 Peach",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1583926512/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1583926646",
+      "name": "Lips Cream Matte 5 Nude",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1583926646/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1724425990",
+      "name": "Luminous Brightening Vitamin C plus Collagen Serum",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1724425990/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1582905097",
+      "name": "Moisturizer Gel Aloe Vera",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1582905097/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1582905096",
+      "name": "Moisturizer Gel Avocado ",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1582905096/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1582905098",
+      "name": "Moisturizer Gel Cucumber Vit E",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1582905098/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1750437799",
+      "name": "Peel Off Mask For Oily and Acne Skin 60 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1750437799/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1590932477",
+      "name": "Pouch DRW",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1590932477/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741967470",
+      "name": "Pouch DRW Cuboid",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741967470/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1645624834",
+      "name": "Pouch DRW For Men",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1645624834/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741967560",
+      "name": "Pouch DRW Glowzy Blue",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741967560/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741967512",
+      "name": "Pouch DRW Glowzy Pink",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741967512/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1741967596",
+      "name": "Pouch DRW Glowzy Purple",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1741967596/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1679924466",
+      "name": "Rice Face Mask Limpasu",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1679924466/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1750857287",
+      "name": "Selling and Recruiting Kit",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1750857287/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1749902280",
+      "name": "Serum AHA BHA New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1749902280/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1593965941",
+      "name": "Serum Brightening Glowing",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1593965941/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1643551195",
+      "name": "Serum For Acne Skin",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1643551195/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1752399903",
+      "name": "Serum For Acne Skin New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1752399903/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1702293496",
+      "name": "Serum Retinol",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1702293496/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692283254",
+      "name": "Silky Soft Face Powder Beige",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1611829751/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1683473138",
+      "name": "Silky Soft Face Powder Ivory",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1683473138/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1683473314",
+      "name": "Silky Soft Face Powder Natural",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1683473314/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1623512653",
+      "name": "Snail Cream Anti Aging",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1623512653/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692210933",
+      "name": "Strawberry Micellar Water 100 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1692210933/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1692211007",
+      "name": "Strawberry Micellar Water 63 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1692211007/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1704971843",
+      "name": "Stretchmark Cream With Olive Oil",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1704971843/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1671983997",
+      "name": "Sulfur Soap Plus Milk",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1671983997/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1753605972",
+      "name": "Sunscreen For Oily and Acne New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753605972/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1748692191",
+      "name": "Sunscreen Glowing New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1748692191/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1696497391",
+      "name": "Sunscreen Natural Glow For Normal Skin",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1696497391/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1753606172",
+      "name": "Sunscreen Natural Glow For Normal Skin New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753606172/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1631102571",
+      "name": "Sunscreen Normal Skin for Men",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1631102571/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1645284280",
+      "name": "Sunscreen Oily Acne For Men",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1645284280/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1699543853",
+      "name": "Sunscreen Pink Glow For Normal Skin",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1699543853/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1753606253",
+      "name": "Sunscreen Yellow Glow For Normal Skin New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753606253/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1686152950",
+      "name": "Tea Tree Oil Face Mask Premium",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1686152950/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1749902092",
+      "name": "Toner Honey Premium 110 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1749902092/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1749902202",
+      "name": "Toner Honey Premium 63 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1749902202/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1681207145",
+      "name": "Toner Lime Premium 110 ml",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1681207145/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1749737670",
+      "name": "Toner Lime Premium 63 ml New",
+      "type": "product",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1749737670/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586774419",
+      "name": "Paket Acne 1",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586774419/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586774523",
+      "name": "Paket Acne 2",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586774523/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586774575",
+      "name": "Paket Acne 3",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586774575/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1595251522",
+      "name": "Paket Acne Brightening Custom",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1595251522/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586781520",
+      "name": "Paket Acne Custom Triple",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586781520/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1753094071",
+      "name": "Paket Alternatif Glow and Brightening",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1753094071/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1752996352",
+      "name": "Paket Alternatif Glow and Brightening 1",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1752996352/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1752996700",
+      "name": "Paket Alternatif Glow and Brightening 2",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1752996700/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586623090",
+      "name": "Paket Brightening 1",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586623090/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586623792",
+      "name": "Paket Brightening 2",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586623792/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586624531",
+      "name": "Paket Brightening 3",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586624531/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586782316",
+      "name": "Paket Brightening Custom",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586782316/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1612968646",
+      "name": "Paket Brightening Glow 100ml",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1612968646/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1611568215",
+      "name": "Paket Brightening Glow 3",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1611568215/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1612971142",
+      "name": "Paket Brightening Glow 60 ml",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1612971142/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1589634757",
+      "name": "Paket Brightening Oily Custom",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1589634757/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1719210488",
+      "name": "Paket Ceramoist Acne",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1719210488/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1719293660",
+      "name": "Paket Ceramoist Glowing",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1719293660/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1755619648",
+      "name": "Paket HB Dosting",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1755619648/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586774807",
+      "name": "Paket Hemat Acne 1",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586774807/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586775104",
+      "name": "Paket Hemat Acne 2",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586775104/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586777459",
+      "name": "Paket Hemat Acne 3",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586777459/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1591024911",
+      "name": "Paket Hemat Acne Custom",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1591024911/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586768729",
+      "name": "Paket Hemat Brightening 1",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586768729/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586769253",
+      "name": "Paket Hemat Brightening 2",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586769253/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1586773827",
+      "name": "Paket Hemat Brightening 3",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1586773827/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1591024650",
+      "name": "Paket Hemat Brightening Custom",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1591024650/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1635871710",
+      "name": "Paket Lotion",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1635871710/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1612969922",
+      "name": "Paket Oily Acne Abha 100 ml",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1612969922/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1611567844",
+      "name": "Paket Oily Acne Abha 3",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1611567844/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1612971440",
+      "name": "Paket Oily Acne Abha 60ml",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1612971440/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    },
+    {
+      "id": "1758819310",
+      "name": "Paket Radiant Brightening Ultimate",
+      "type": "package",
+      "gambar_url": "https://drwgroup.id/com.drw.skincare/1.0.0/produk/1758819310/foto",
+      "foto_produk_count": 1,
+      "has_old_url": true,
+      "has_new_images": true
+    }
+  ],
+  "missing_images": [],
+  "good": [
+    {
+      "id": "18232000276",
+      "name": "Glowtech Biospicule Rejuvenation",
+      "type": "product",
+      "gambar_url": "https://storage.googleapis.com/drwskincare-product-images/products/18232000276/foto-0-82bd520e-2bda-4315-bad8-56fb8794aff0.jpg",
+      "foto_produk_count": 1,
+      "has_old_url": false,
+      "has_new_images": true
+    },
+    {
+      "id": "18231903332",
+      "name": "Radiant Bright Ultimate",
+      "type": "product",
+      "gambar_url": "https://storage.googleapis.com/drwskincare-product-images/products/18231903332/foto-0-3f3d9f85-5a97-43f4-9144-56ce67e4c51d.jpg",
+      "foto_produk_count": 2,
+      "has_old_url": false,
+      "has_new_images": true
+    },
+    {
+      "id": "18231903333",
+      "name": "Radiant Glow Booster",
+      "type": "product",
+      "gambar_url": "https://storage.googleapis.com/drwskincare-product-images/products/18231903333/foto-0-cbf0ae1b-57b8-4bb6-a3da-15365ee61571.jpg",
+      "foto_produk_count": 1,
+      "has_old_url": false,
+      "has_new_images": true
+    }
+  ],
+  "summary": {
+    "total_products": 165,
+    "problematic_count": 7,
+    "old_with_new_count": 155,
+    "missing_images_count": 0,
+    "good_count": 3,
+    "analysis_timestamp": "Generated by analyze_broken_images.py"
+  }
+}
